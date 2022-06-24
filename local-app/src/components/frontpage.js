@@ -1,11 +1,18 @@
 import React from 'react';
 import Navbar from './navbar';
+import Landing from './landing';
+import About from './about';
+import Testimonies from './testimonies';
+import SignUp from './signup';
 
 export default function FrontPage(props) {
     return (
-        <div id='frontpage'>
+        <div id='front-page'>
             <Navbar />
-            <h1>This is frontpage</h1>
+            <Landing />
+            <About />
+            <Testimonies />
+            <SignUp />
         </div>
     );
 }
