@@ -6,6 +6,7 @@
 
 #front-page {
     --border-color: #C0C0C0;
+    --overlay-color: rgba(255, 255, 255, 0.3);
 }
 
 #front-page {
@@ -117,7 +118,47 @@
     width: 50rem;
 }
 
+.transparent-overlay {
+    align-items: center;
+    background-color: var(--overlay-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
 
+.transparent-overlay > h2 {
+    font-size: 3rem;
+}
+
+.transparent-overlay > form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.signup-buttons > * {
+    border-radius: 10px;
+    border: 1 px solid var(--border-color);
+    height: 2.1rem;
+    margin: 0.5rem;
+    transition: 100ms;
+    width: 12rem;
+}
+
+.signup-buttons > *:hover {
+    box-shadow: 0 3px 5px var(--shadow-color);
+    opacity: 0.7;
+}
 
 
 

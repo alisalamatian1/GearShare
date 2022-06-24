@@ -10,20 +10,28 @@ export default function SignUp(props) {
                 backgroundImage: `url(${signupImage})`
             }}
             >
-                <h2 className='main-text'>Let's go exploring</h2>
-                <form id='sign-up'>
-                    <label for='email'>
-                    </label>
-                    <label for='password'>
-                    </label>
-                    <button className='sign-up-button'>
-                        Sign up 
-                    </button>
-                    <button className='sign-up-google'>
-                        Sign up with Google
-                    </button>
-                </form>
+                <div className='transparent-overlay'>
+                    <h2 className='main-text'>Let's go exploring</h2>
+                    <form id='sign-up'>
+                        <label for='email'>
+                            Email: <br />
+                            <input id='email' />
+                        </label>
+                        <label for='password'>
+                            Password: <br />
+                            <input id='password' />
+                        </label>
+                        <div className='signup-buttons'>
+                            <button className='sign-up-button'>
+                                Sign up 
+                            </button>
+                            <button className='sign-up-google'>
+                                Sign up with Google
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    );
+);
 }

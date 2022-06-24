@@ -4,6 +4,7 @@ import Landing from './landing';
 import About from './about';
 import Testimonies from './testimonies';
 import SignUp from './signup';
+import Copyright from './copyright';
 
 export default function FrontPage(props) {
     return (
@@ -13,6 +14,7 @@ export default function FrontPage(props) {
             <About />
             <Testimonies />
             <SignUp />
+            <Copyright />
         </div>
     );
 }
