@@ -1,4 +1,5 @@
 .section {
+    display: flex;
     height: 100vh;
     width: 100%;
 }
@@ -17,10 +18,13 @@
 
 #landing {
     align-items: center;
-    display: flex;
     flex-direction: column;
     height: 80vh;
     width: 100%;
+}
+
+#landing {
+    font-size: 2rem;
 }
 
 #landing-container {
@@ -32,8 +36,13 @@
     min-width: 50rem;
 }
 
-#landing-image {
+.img {
     border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 15px var(--shadow-color);
+}
+
+#landing-image {
+    max-height: 26rem;
 }
 
 #landing-text {
@@ -49,9 +58,67 @@
     max-width: 25rem;
 }
 
+#landing-text > h3 {
+    font-size: 2rem;
+}
+
+#landing-text > p {
+    font-size: 1.1rem;
+}
+
 #landing-text span {
     font-weight: bold;
 }
+
+#about {
+    align-items: center;
+    justify-content: center;
+}
+
+#about-left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#about-left > h2 {
+    font-size: 2.5rem;
+}
+
+#about-left > img {
+    max-height: 25rem;
+}
+
+#about-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35rem;
+}
+
+#about-right > h4 {
+    font-size: 1.5rem;
+    max-width: 25rem;
+}
+
+#about-right > p {
+    font-size: 1.1rem;
+    max-width: 25rem;
+}
+
+#signup {
+    align-items: center;
+    justify-content: center;
+}
+
+#signup-container {
+    height: 40rem;
+    width: 50rem;
+}
+
+
+
 
 
 

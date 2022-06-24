@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export default function Navbar(props) {
     return (
         <div id='navbar'>
-            <h1>This is Navbar</h1>
             <Link to='/'>
                 <button>
                     {/* event handler to decide if login or
