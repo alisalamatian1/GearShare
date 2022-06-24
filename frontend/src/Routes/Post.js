@@ -37,14 +37,14 @@ const Post = () => {
     
     return (       
         <div>
-                <h2>Enter the details of the gear</h2>
-                <form>
-                    <input onChange = {titleHandler} type= "text" placeholder='Enter the title'/> <br />
-                    <textarea onChange = {bodyHandler} type= "text" placeholder='Enter the gear description'/> <br />
-                    <button onClick={submitHandler}>
-                        Submit
-                    </button>
-                </form>
+            <h2>Enter the details of the gear</h2>
+            <form>
+                <input onChange = {titleHandler} type= "text" placeholder='Enter the title'/> <br />
+                <textarea onChange = {bodyHandler} type= "text" placeholder='Enter the gear description'/> <br />
+                <button onClick={submitHandler}>
+                    Submit
+                </button>
+            </form>
         </div>
     )
 }
