@@ -9,6 +9,10 @@ html, body, #root, #app {
     width: 100%;
 }
 
+#navbar {
+    height: 20vh;
+}
+
 .text-green {
     color: #228B22;
 }
