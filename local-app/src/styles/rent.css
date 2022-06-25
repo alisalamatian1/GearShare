@@ -1,5 +1,5 @@
 #rent-page {
-    --border-color: black;
+    --border-color: #C0C0C0;
     --overlay-color: rgba(50, 50, 50, 0.4);
     --popup-color: #FAF9F6;
     --shadow-color: black; 
@@ -30,12 +30,19 @@
 
 .item {
     align-items: center;
-    border: 2px solid var(--border-color);
+    box-shadow: 1px 1px 5px var(--shadow-color);
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     height: 15rem;
     justify-content: center;
+    transition: 200ms;
     width: 15rem;
+}
+
+.item:hover {
+    box-shadow: 3px 3px 8px var(--shadow-color);
+    transform: scale(1.05);
 }
 
 #overlay {
