@@ -4,6 +4,7 @@ import Frontpage from './components/frontpage';
 import LoginSignupPage from './components/loginsignuppage';
 import RentPage from './components/rentpage.js';
 import PostPage from './components/postpage.js';
+import Post from './Post.js';
 
 // shows pages according to current URL
 
@@ -43,10 +44,7 @@ class Main extends React.Component {
             </Route>
             <Route 
             exact path='/post' 
-            element={<PostPage 
-                    onSubmit={this.handlePost}
-                    defaultContact={this.state.user.email}
-        />}>
+            element={<Post />}> 
             </Route>
         </Routes>
         );

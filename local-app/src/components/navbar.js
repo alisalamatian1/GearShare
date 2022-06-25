@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import icon from '../img/GearShare.png'
-import '../styles/navbar.css';
 
 export default function Navbar(props) {
     return (
@@ -18,7 +17,7 @@ export default function Navbar(props) {
                 <Link to="/post">Post</Link>
             </ul>
             <ul>
-                <Link to="/" className="nav-login">Login</Link>
+                <Link to="/loginsignup" className="nav-login">Login</Link>
             </ul>
         </nav>
     );
