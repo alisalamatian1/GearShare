@@ -31,7 +31,7 @@ export default function RentPage() {
     useEffect(() => {
         console.log("-------")
         fetchGearList();
-    },);
+    }, []);
 
     const [isModalDisplayed, setModalDisplayed] = useState(false);
     const [currentTitle, setCurrentTitle] = useState('');
