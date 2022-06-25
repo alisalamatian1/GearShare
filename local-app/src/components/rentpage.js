@@ -46,11 +46,10 @@ export default function RentPage() {
                                     {gear.title}
                                 </p>
                                 <p className='item-dates' className='main-text'>
-                                    {/* TALK TO ALI */}
-                                    DEFAULT DATE
+                                    {gear.dates}
                                 </p>
                                 <p className='item-rate' className='main-text'>
-                                    DEFAULT RATE
+                                    {gear.rate}
                                 </p>
                             </div>
                             )
@@ -61,6 +60,7 @@ export default function RentPage() {
         </div>
     );
 }
+
 
 
 

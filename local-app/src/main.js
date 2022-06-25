@@ -2,11 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Frontpage from './components/frontpage';
 import LoginSignupPage from './components/loginsignuppage';
-import RentPage from './components/rentpage.js';
-import PostPage from './components/postpage.js';
-import SignupPage from './components/signuppage.js';
-import LoginPage from './components/loginpage.js';
-import Post from './Post.js';
+import RentPage from './components/rentpage';
+import PostPage from './components/postpage';
+import SignupPage from './components/signuppage';
+import LoginPage from './components/loginpage';
 
 // shows pages according to current URL
 
@@ -38,13 +37,12 @@ class Main extends React.Component {
             </Route>
             <Route 
             exact path='/rent' 
-            element={<RentPage 
-                    items={this.state.items}
+            element={<RentPage
             />}>
             </Route>
             <Route 
             exact path='/post' 
-            element={<Post />}> 
+            element={<PostPage />}> 
             </Route>
         </Routes>
         );
