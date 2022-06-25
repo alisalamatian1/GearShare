@@ -11,14 +11,14 @@ export default function Navbar(props) {
                 <Link to="/">Browse</Link>
                 <Link to="/">About</Link> 
                 <Link to="/">Reviews</Link>
-                <Link to="/">Sign Up</Link>                
-                {/* TO EDIT */}
-                <Link to="/loginsignup">Loginsignup</Link>
-                <Link to="/rent">Rent</Link>
-                <Link to="/post">Post</Link>
+                <Link to="/signup">Sign Up</Link>                
+                <Link to='/rent'>Rent</Link>
+                <Link to='/post'>Post</Link>
             </ul>
             <ul>
-                <Link to="/" className="nav-login">Login</Link>
+                <Link to="/login" className="nav-login">
+                    Login
+                </Link>
             </ul>
         </nav>
     );

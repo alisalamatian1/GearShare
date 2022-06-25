@@ -1,127 +1,98 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import axios from 'axios'
 import Navbar from './navbar';
 
-export default class PostPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: '',
-            dates: '',
-            rate: '',
-            contact: '',
-            description: '',
-        };
-        this.handleTitleChange = this.handleTitleChange.bind(this);
-        this.handleDatesChange = this.handleDatesChange.bind(this);
-        this.handleRateChange = this.handleRateChange.bind(this);
-        this.handleContactChange = this.handleContactChange.bind(this);
-        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
+const PostPage = () => {
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
+    const [dates, setDates] = useState("");
+    const [contact, setContact] = useState("");
+    const [rate, setRate] = useState("");
+    const submitHandler = (e) =>{
+        e.preventDefault();
+        
+        const config = {
+            headers: {
+                "Content-Type": "application/json" 
+            }
+        }
+
+        axios.post('/api/post', {title, body, dates, rate, contact}, config).then(
+            res => {
+                alert(`${res.data.message}`);
+            }
+        ).catch(
+            err => {
+                alert(err.message);
+            }
+        )
     }
 
-    render() {
-        return (
-            <div id='post-page' className='section'>
-                <Navbar />
-                <h1 className='main-text'>Make a Post</h1>
-                <div id='post-container'>
-                    <form id='post' onSubmit={this.handleSubmit}>
-                        <label htmlFor='title'>
-                            Post Title <br />
-                            <input 
-                            value={this.state.title}
-                            onChange={this.handleTitleChange}
-                            />
+    const titleHandler = (e)=>{
+        setTitle(e.target.value)
+    }
+
+    const bodyHandler = (e)=>{
+        setBody(e.target.value)
+    }
+
+    const datesHandler = (e)=>{
+        setDates(e.target.value)
+    }
+
+    const rateHandler = (e)=>{
+        setRate(e.target.value)
+    }
+
+    const contactHandler = (e)=>{
+        setContact(e.target.value)
+    }
+    
+    
+    return (       
+        <div id='post-page' className='section'>
+            <Navbar />
+            <h1 className='main-text'>Make a Post</h1>
+            <div id='post-container'>
+                <form id='post' onSubmit={submitHandler}>
+                    <label htmlFor='title'>
+                        Post Title <br />
+                        <input 
+                        onChange={titleHandler}
+                    />
                         </label>
                         <label htmlFor='dates'>
                             Available Dates <br />
+                            <input 
+                            onChange={datesHandler}
+                        />
+                            </label>
+                            <label htmlFor='rate'>
+                                Rate<br />
                                 <input 
-                                value={this.state.dates}
-                                onChange={this.handleDatesChange}
+                                onChange={rateHandler}
                             />
-                        </label>
-                        <label htmlFor='rate'>
-                            Rate<br />
-                                <input 
-                                value={this.state.rate}
-                                onChange={this.handleRateChange}
-                            />
-                        </label>
-                        <label id='contact' htmlFor='contact'>
-                            Contact<br />
-                                <input 
-                                value={this.state.contact}
-                                onChange={this.handleContactChange}
-                            />
-                                <label htmlFor='default-contact'>
-                                    <input 
-                                    type='checkbox'
-                                    id='default-c'
-                                    onChange={this.handleCheckboxChange}/>
-                                    Use my registered e-mail as my preferred 
-                                    contact
                                 </label>
-                        </label>
-                        <label htmlFor='description'>
-                            Description<br />
-                                <input 
-                                value={this.state.description}
-                                onChange={this.handleDescriptionChange}
-                            />
-                        </label>
-                        <button>Post</button>
-                    </form>
-                </div>
-            </div>
-        );
-        }
-
-            handleSubmit(e) {
-                e.preventDefault();
-                const title = this.state.title;
-                const dates = this.state.dates;
-                const rate = this.state.rate;
-                const contact = this.state.contact;
-                const description = this.state.description;
-
-                this.setState({title: ''});
-                this.setState({dates: ''});
-                this.setState({rate: ''});
-                this.setState({contact: ''});
-                this.setState({description: ''});
-                this.props.onSubmit({
-                    title,
-                    dates,
-                    rate,
-                    contact,
-                    description,
-                });
-            }
-
-            handleTitleChange(e) {
-                this.setState({title: e.target.value});
-            }
-
-            handleDatesChange(e) {
-                this.setState({dates: e.target.value});
-            }
-
-            handleRateChange(e) {
-                this.setState({rate: e.target.value});
-            }
-
-            handleContactChange(e) {
-                this.setState({contact: e.target.value});
-            }
-
-            handleDescriptionChange(e) {
-                this.setState({description: e.target.value});
-            }
-
-            handleCheckboxChange(e) {
-                if (e.target.checked) {
-                    this.setState({contact: this.props.defaultContact});
-                }
-            }
+                                <label id='contact' htmlFor='contact'>
+                                    Contact<br />
+                                    <input 
+                                    onChange={contactHandler}
+                                />
+                                    </label>
+                                    <label htmlFor='description'>
+                                        Description<br />
+                                        <input 
+                                        onChange={bodyHandler}
+                                    />
+                                        </label>
+                                        <button>Post</button>
+                                    </form>
+                                </div>
+                            </div>
+    )
 }
+
+export default PostPage;
+

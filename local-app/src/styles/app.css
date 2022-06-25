@@ -2,6 +2,9 @@
     --main-font: ;
     --shadow-color: black;
     --action-color: #00008B;
+    --signup-bg: #F9F6EE; 
+    --signup-google-bg: #4169E1;
+    --signup-google-fg: white;
 }
 
 html, body, #root, #app {
@@ -23,9 +26,19 @@ html, body, #root, #app {
     font-family: var(--main-font);
 }
 
+.sign-up-button {
+    background-color: var(--signup-bg);
+}
+
+.sign-up-google {
+    background-color: var(--signup-google-bg);
+    color: var(--signup-google-fg);
+}
+
 @import './frontpage.css';
 @import './loginsignup.css';
 @import './post.css';
 @import './rent.css';
+@import './navbar.css';
 
 

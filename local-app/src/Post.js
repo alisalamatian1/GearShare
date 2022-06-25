@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
+import Navbar from './components/navbar';
 
 const Post = () => {
     const [title, setTitle] = useState("");
@@ -51,23 +52,45 @@ const Post = () => {
     
     
     return (       
-        <div>
-            <div>
-            <a href="/">Home</a>
-                <Link to = "/">Problem Bank</Link>
-            </div>
-            <h2>Enter the details of the gear</h2>
-            <form>
-                <input onChange = {titleHandler} type= "text" placeholder='Enter the title'/> <br />
-                <textarea onChange = {bodyHandler} type= "text" placeholder='Enter the gear description'/> <br />
-                <input onChange = {datesHandler} type= "text" placeholder='Enter the available dates'/> <br />
-                <input onChange = {rateHandler} type= "text" placeholder='Enter your rates'/> <br />
-                <input onChange = {contactHandler} type= "text" placeholder='Enter your preferred contact'/> <br />
-                <button onClick={submitHandler}>
-                    Submit
-                </button>
-            </form>
-        </div>
+        <div id='post-page' className='section'>
+            <Navbar />
+            <h1 className='main-text'>Make a Post</h1>
+            <div id='post-container'>
+                <form id='post' onSubmit={submitHandler}>
+                    <label htmlFor='title'>
+                        Post Title <br />
+                        <input 
+                        onChange={titleHandler}
+                    />
+                        </label>
+                        <label htmlFor='dates'>
+                            Available Dates <br />
+                            <input 
+                            onChange={datesHandler}
+                        />
+                            </label>
+                            <label htmlFor='rate'>
+                                Rate<br />
+                                <input 
+                                onChange={rateHandler}
+                            />
+                                </label>
+                                <label id='contact' htmlFor='contact'>
+                                    Contact<br />
+                                    <input 
+                                    onChange={contactHandler}
+                                />
+                                    </label>
+                                    <label htmlFor='description'>
+                                        Description<br />
+                                        <input 
+                                        onChange={bodyHandler}
+                                    />
+                                        </label>
+                                        <button>Post</button>
+                                    </form>
+                                </div>
+                            </div>
     )
 }
 
