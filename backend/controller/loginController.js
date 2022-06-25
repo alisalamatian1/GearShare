@@ -16,7 +16,7 @@ exports.signUp = async (req, res, next) => {
         const signUp = await Login.create({
             email, password
         })
-        
+        console.log("+++++++++++++++++++++++++++++++")
         res.status(201).json({
             success: true,
             message: "user created"
@@ -47,6 +47,7 @@ exports.login = async (req, res, next) => {
                 message: "user not found"
             })
         } else {
+            console.log("login successful, we are sending back the result")
             res.status(201).json({
                 success: true,
                 message: "user found"

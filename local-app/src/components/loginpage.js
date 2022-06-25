@@ -36,14 +36,15 @@ export default class LoginPage extends React.Component {
         }
         axios.post("/ls/login", {email: this.state.email, password: this.state.password}, config).then(
             res => {
-                alert(`here is the error: `);
+                alert(`here is the error: ${res.data.message}`);
             }
         ).catch(
            
             err => {
-                alert(err.message);
+                alert(`error message: ${err.message}`);
             }
         )
+        console.log("we are outside the method without a respond async is not working!!!!")
     }
 
     render() {

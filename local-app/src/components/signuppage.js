@@ -2,8 +2,7 @@ import React from 'react';
 import Navbar from './navbar';
 import Copyright from './copyright';
 import { Link } from 'react-router-dom';
-
-
+import axios from 'axios'
 
 export default class SignupPage extends React.Component {
     constructor(props) {
@@ -22,6 +21,21 @@ export default class SignupPage extends React.Component {
         e.preventDefault();
         // this.state.email
         // this.state.password
+        const config = {
+            headers: {
+                "Content-Type": "application/json" 
+            }
+        }
+        axios.post("/ls/signUp", {email: this.state.email, password: this.state.password}, config).then(
+            res => {
+                alert(`${res.data.message}`);
+            }
+        ).catch(
+           
+            err => {
+                alert(err.message);
+            }
+        )
     }
 
     handleEmailChange(e) {
