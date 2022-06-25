@@ -1,6 +1,7 @@
 :root {
     --main-font: ;
     --shadow-color: black;
+    --action-color: #00008B;
 }
 
 html, body, #root, #app {

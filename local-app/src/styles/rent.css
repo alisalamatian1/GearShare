@@ -1,0 +1,39 @@
+#rent-page {
+    --border-color: black;
+}
+
+#rent-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#rent-page {
+    flex-direction: column;
+}
+
+#items-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90rem;
+    width: 65%;
+}
+
+#items-container > * {
+    margin: 2rem;
+}
+
+.item {
+    align-items: center;
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    justify-content: center;
+    width: 15rem;
+}
+
+
+
