@@ -1,5 +1,8 @@
 import React from 'react';
 import Navbar from './navbar';
+import { Link } from 'react-router-dom';
+
+
 
 export default class SignupPage extends React.Component {
     constructor(props) {
@@ -31,7 +34,10 @@ export default class SignupPage extends React.Component {
                             </button>
                         </div>
                         <p className='main-text'>
-                            Already a user? <span className='action'>Log in.</span>
+                            Already a user? <span className='action'>
+                                <Link to='/login'>Log in.
+                                </Link>
+                            </span>
                         </p>
                     </form>
                 </div>

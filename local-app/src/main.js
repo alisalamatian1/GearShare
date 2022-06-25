@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Frontpage from './components/frontpage';
-import LoginSignupPage from './components/loginsignuppage';
 import RentPage from './components/rentpage';
 import PostPage from './components/postpage';
 import SignupPage from './components/signuppage';
