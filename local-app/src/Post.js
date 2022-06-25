@@ -2,16 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
-import Navbar from './components/navbar';
 
 const Post = () => {
     const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
     const [dates, setDates] = useState("");
-    const [rate, setRate] = useState("");
-    const [contact, setContact] = useState("");
-    const [isUsingDefaultContact, setDefaultContact] = useState("");
-    const [description, setDescription] = useState("");
-
+    const [contact, Setcontact] = useState("");
     const submitHandler = (e) =>{
         e.preventDefault();
         
@@ -21,7 +17,7 @@ const Post = () => {
             }
         }
 
-        axios.post('/api/post', {title, description}, config).then(
+        axios.post('/api/post', {title, body, dates, contact}, config).then(
             res => {
                 alert(`${res.data.message}`);
             }
@@ -36,77 +32,37 @@ const Post = () => {
         setTitle(e.target.value)
     }
 
+    const bodyHandler = (e)=>{
+        setBody(e.target.value)
+    }
+
     const datesHandler = (e)=>{
         setDates(e.target.value)
     }
 
-    const rateHandler = (e)=>{
-        setRate(e.target.value)
-    }
-
     const contactHandler = (e)=>{
-        setContact(e.target.value)
-    }
-
-    const descriptionHandler = (e)=>{
-        setDescription(e.target.value)
-    }
-
-    const defaultContactHandler = (e)=> {
-        // does nothing
-        setDefaultContact(e.target.checked);
+        Setcontact(e.target.value)
     }
     
+    
     return (       
-        <div id='post-page' className='section'>
-            <Navbar />
-            <h1 className='main-text'>Make a Post</h1>
-            <div id='post-container'>
-                <form id='post' onSubmit={submitHandler}>
-                    <label htmlFor='title'>
-                        Post Title <br />
-                        <input 
-                        onChange={titleHandler}
-                    />
-                        </label>
-                        <label htmlFor='dates'>
-                            Available Dates <br />
-                            <input 
-                            onChange={datesHandler}
-                        />
-                            </label>
-                            <label htmlFor='rate'>
-                                Rate<br />
-                                <input 
-                                onChange={rateHandler}
-                            />
-                                </label>
-                                <label id='contact' htmlFor='contact'>
-                                    Contact<br />
-                                    <input 
-                                    onChange={contactHandler}
-                                />
-                                        <label htmlFor='default-contact'>
-                                            <input 
-                                            type='checkbox'
-                                            id='default-c'
-                                            onChange={defaultContactHandler}/>
-                                            Use my registered e-mail as my preferred 
-                                            contact
-                                        </label>
-                                    </label>
-                                    <label htmlFor='description'>
-                                        Description<br />
-                                        <input 
-                                        onChange={descriptionHandler}
-                                    />
-                                        </label>
-                                        <button>Post</button>
-                                    </form>
-                                </div>
-                            </div>
-   );
+        <div>
+            <div>
+            <a href="/">Home</a>
+                <Link to = "/">Problem Bank</Link>
+            </div>
+            <h2>Enter the details of the gear</h2>
+            <form>
+                <input onChange = {titleHandler} type= "text" placeholder='Enter the title'/> <br />
+                <textarea onChange = {bodyHandler} type= "text" placeholder='Enter the gear description'/> <br />
+                <input onChange = {datesHandler} type= "text" placeholder='Enter the available dates'/> <br />
+                <input onChange = {contactHandler} type= "text" placeholder='Enter your preferred contact'/> <br />
+                <button onClick={submitHandler}>
+                    Submit
+                </button>
+            </form>
+        </div>
+    )
 }
 
 export default Post;
-
