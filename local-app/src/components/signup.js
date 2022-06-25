@@ -29,6 +29,7 @@ export default function SignUp(props) {
                                 Sign up with Google
                             </button>
                         </div>
+                        <p>Already a user? <span className='action'>Log in.</span></p>
                     </form>
                 </div>
             </div>
