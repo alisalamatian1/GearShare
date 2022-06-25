@@ -1,4 +1,4 @@
-const Gear = require('../model/gear');
+const Gear = require('../model/gearSchema');
 const ErrorResponse = require('../util/errorResponse');
 
 exports.list_all = async (req, res, next) => {
@@ -13,7 +13,7 @@ exports.list_all = async (req, res, next) => {
     } catch(err) {
         res.status(500).json({
             success:false, 
-            error:error.message
+            error:err.message
         });
     }
 }
@@ -38,7 +38,7 @@ exports.post = async (req, res, next) => {
     } catch(err) {
         res.status(500).json({
             success: false, 
-            error: error.message
+            error: err.message
         });
     }
 }
