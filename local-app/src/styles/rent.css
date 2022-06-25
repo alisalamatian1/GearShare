@@ -1,5 +1,8 @@
 #rent-page {
     --border-color: black;
+    --overlay-color: rgba(50, 50, 50, 0.4);
+    --popup-color: #FAF9F6;
+    --shadow-color: black; 
 }
 
 #rent-container {
@@ -34,6 +37,91 @@
     justify-content: center;
     width: 15rem;
 }
+
+#overlay {
+    align-items: center;
+    background-color: var(--overlay-color);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+}
+
+#pop-up {
+    align-items: center;
+    background-color: var(--popup-color);
+    box-shadow: 5px 5px 20px var(--shadow-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    position: relative;
+    width: 40rem;
+}
+
+#pop-up > #close-button {
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 2rem;
+    right: 1rem;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    transition: 100ms ease-out;
+    width: 2rem;
+}
+
+#pop-up > #close-button:hover { 
+    transform: rotate(90deg) scale(1.1);
+}
+
+#pop-up .crossbar {
+    background-color: var(--overlay-color);
+    border-radius: 20px;
+    height: 1.4rem;
+    position: absolute;
+    width: 0.2rem;
+}
+
+#left-crossbar {
+    transform: rotate(-45deg);
+}
+
+#right-crossbar {
+    transform: rotate(45deg);
+}
+
+#pop-up > hr {
+    background-color: var(--overlay-color);
+    height: 1px;
+    width: 24rem;
+}
+
+#pop-up > #dates {
+    font-size: 0.9rem;
+}
+
+#pop-up > #rate {
+    font-size: 1.1rem;
+}
+
+#pop-up > h1, hr, #dates, #rate, #description {
+    margin-top: 2rem;
+}
+
+#pop-up > #contact {
+    bottom: 1rem;
+    position: absolute;
+}
+
+
+
+
+
+
 
 
 
