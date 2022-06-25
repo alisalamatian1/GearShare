@@ -4,6 +4,7 @@ import uniqid from 'uniqid';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './navbar';
+import Copyright from './copyright';
 import Modal from './modal';
 
 export default function RentPage() {
@@ -98,6 +99,7 @@ export default function RentPage() {
                     )}
                 </div>
             </div>
+            <Copyright />
         </div>
     );
 }

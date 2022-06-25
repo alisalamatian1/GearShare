@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
+import Copyright from './copyright';
 import Navbar from './navbar';
 
 const PostPage = () => {
@@ -90,6 +91,7 @@ const PostPage = () => {
                                         <button>Post</button>
                                     </form>
                                 </div>
+                                <Copyright />
                             </div>
     )
 }

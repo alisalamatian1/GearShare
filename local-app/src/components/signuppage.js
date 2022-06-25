@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './navbar';
+import Copyright from './copyright';
 import { Link } from 'react-router-dom';
 
 
@@ -63,6 +64,7 @@ export default class SignupPage extends React.Component {
                         </p>
                     </form>
                 </div>
+                <Copyright />
             </div>
         );
     }

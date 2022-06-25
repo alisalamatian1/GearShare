@@ -14,7 +14,11 @@
 }
 
 #rent-page {
+    align-items: center;
     flex-direction: column;
+    height: fit-content;
+    padding-bottom: 8rem;
+    position: relative;
 }
 
 #items-container {
