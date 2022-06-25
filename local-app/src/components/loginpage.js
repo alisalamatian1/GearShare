@@ -26,9 +26,9 @@ export default class LoginPage extends React.Component {
         this.setState({password: e.target.value});
     }
 
-    handleSubmit() {
-        // this.state.email // this is e-mail
-        // this.state.password // this is password 
+    handleSubmit(e) {
+        e.preventDefault();
+
         const config = {
             headers: {
                 "Content-Type": "application/json" 
@@ -37,6 +37,7 @@ export default class LoginPage extends React.Component {
         axios.post("/ls/login", {email: this.state.email, password: this.state.password}, config).then(
             res => {
                 alert(`here is the error: ${res.data.message}`);
+                this.props.handleSuccess(res.data.success);
             }
         ).catch(
            
@@ -50,7 +51,7 @@ export default class LoginPage extends React.Component {
     render() {
         return (
             <div id='loginsignup-page' className='section'>
-                <Navbar />
+                <Navbar isSuccessful={this.props.isSuccessful} />
                 <h2 className='main-text'>Log In</h2>
                 <p className='main-text'>Welcome back! We missed you</p>
                 <div id='form-container'>
