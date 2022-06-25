@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -37,6 +38,10 @@ const Post = () => {
     
     return (       
         <div>
+            <div>
+            <a href="/">Home</a>
+                <Link to = "/">Problem Bank</Link>
+            </div>
             <h2>Enter the details of the gear</h2>
             <form>
                 <input onChange = {titleHandler} type= "text" placeholder='Enter the title'/> <br />
