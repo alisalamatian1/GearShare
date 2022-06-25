@@ -6,7 +6,8 @@ import axios from 'axios'
 const Post = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
-
+    const [dates, setDates] = useState("");
+    const [contact, Setcontact] = useState("");
     const submitHandler = (e) =>{
         e.preventDefault();
         
@@ -16,7 +17,7 @@ const Post = () => {
             }
         }
 
-        axios.post('/api/post', {title, body}, config).then(
+        axios.post('/api/post', {title, body, dates, contact}, config).then(
             res => {
                 alert(`${res.data.message}`);
             }
@@ -34,6 +35,14 @@ const Post = () => {
     const bodyHandler = (e)=>{
         setBody(e.target.value)
     }
+
+    const datesHandler = (e)=>{
+        setDates(e.target.value)
+    }
+
+    const contactHandler = (e)=>{
+        Setcontact(e.target.value)
+    }
     
     
     return (       
@@ -46,6 +55,8 @@ const Post = () => {
             <form>
                 <input onChange = {titleHandler} type= "text" placeholder='Enter the title'/> <br />
                 <textarea onChange = {bodyHandler} type= "text" placeholder='Enter the gear description'/> <br />
+                <input onChange = {datesHandler} type= "text" placeholder='Enter the available dates'/> <br />
+                <input onChange = {contactHandler} type= "text" placeholder='Enter your preferred contact'/> <br />
                 <button onClick={submitHandler}>
                     Submit
                 </button>

@@ -37,7 +37,7 @@ export default function AllGears() {
                 <a href="/">Home</a>
                 <Link to = "/Post">Post a gear</Link>
             </div>
-            <h2>Gear Bank</h2>
+            <h2>Rent Gear</h2>
             <div>
                 {gears.map(                  
                     (gear) => {
@@ -48,6 +48,10 @@ export default function AllGears() {
                                 <hr />
                                 <p>{gear.body}</p>
                                 <hr />
+                                <p>{gear.dates}
+                                </p>
+                                <p>{gear.contact}
+                                </p>
                             </div>
                         )
                     }

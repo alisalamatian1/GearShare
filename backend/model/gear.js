@@ -9,6 +9,14 @@ const GearSchema = new mongoose.Schema({
     body: {
         type: String,
         required: [true, "Description"]
+    },
+    dates: {
+        type: String,
+        required: [true, "Please enter the available dates"]
+    },
+    contact: {
+        type: String,
+        required: [true, "Please enter the your prefered contact"]
     }
 });
 
