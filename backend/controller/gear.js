@@ -19,7 +19,7 @@ exports.list_all = async (req, res, next) => {
 }
 
 exports.post = async (req, res, next) => {
-    const {title, body, dates, contact} = req.body;
+    const {title, body, dates, rate, contact} = req.body;
 
     if(!title || !body) {
         return next(new ErrorResponse("Please provide title and content", 400));
@@ -27,7 +27,7 @@ exports.post = async (req, res, next) => {
 
     try {
         const gear = await Gear.create({
-            title, body, dates, contact
+            title, body, dates, rate, contact
         });
 
         res.status(201).json({
