@@ -2,10 +2,10 @@ import React from 'react';
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from './components/navbar';
+import Navbar from './navbar';
 import uniqid from 'uniqid';
 
-export default function AllGears() {
+export default function RentPage() {
     const [gears, setGears] = useState([]);
 
     const fetchGearList = () => {
