@@ -14,6 +14,10 @@ const GearSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please enter the available dates"]
     },
+    rate: {
+        type: String,
+        required: [true, "Please enter your rates"]
+    },
     contact: {
         type: String,
         required: [true, "Please enter the your prefered contact"]
