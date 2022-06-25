@@ -20,9 +20,14 @@ html, body, #root, #app {
 
 .text-green {
     color: #228B22;
+    font-weight: bold;
 }
 
 .main-text {
+    font-family: var(--main-font);
+}
+
+button {
     font-family: var(--main-font);
 }
 
@@ -33,6 +38,12 @@ html, body, #root, #app {
 .sign-up-google {
     background-color: var(--signup-google-bg);
     color: var(--signup-google-fg);
+}
+
+.copyright {
+    bottom: 2rem;
+    opacity: 0.6;
+    position: absolute;
 }
 
 @import './frontpage.css';
