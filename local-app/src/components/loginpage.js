@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './navbar';
 import { Link } from 'react-router-dom'
 import Copyright from './copyright';
+import axios from 'axios'
 
 export default class LoginPage extends React.Component {
     constructor(props) {
@@ -28,6 +29,21 @@ export default class LoginPage extends React.Component {
     handleSubmit() {
         // this.state.email // this is e-mail
         // this.state.password // this is password 
+        const config = {
+            headers: {
+                "Content-Type": "application/json" 
+            }
+        }
+        axios.post("/ls/login", {email: this.state.email, password: this.state.password}, config).then(
+            res => {
+                alert(`here is the error: `);
+            }
+        ).catch(
+           
+            err => {
+                alert(err.message);
+            }
+        )
     }
 
     render() {

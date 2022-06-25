@@ -11,6 +11,7 @@ app.use(express.json());
 
 //Routing
 app.use('/api/', require('./routing/gear'));
+app.use('/ls/', require('./routing/login'))
 
 
 const port = process.env.PORT || 8000;

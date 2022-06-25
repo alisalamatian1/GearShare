@@ -31,7 +31,6 @@ exports.signUp = async (req, res, next) => {
 
 exports.login = async (req, res, next) => {
     const {email, password} = req.body;
-
     if (!email || !password) {
         return next(new ErrorResponse("Please provide both email and password"), 400);
     } else if (password.length < 6) {
@@ -39,8 +38,10 @@ exports.login = async (req, res, next) => {
     } 
 
     try {
+        console.log("+++++++++++++++++++++++++++++++")
         const login = await Login.findOne({email: email})
         if (login == null) {
+            console.log("_______________________________")
             res.status(404).json({
                 success: false,
                 message: "user not found"
