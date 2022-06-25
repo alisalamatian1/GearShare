@@ -13,7 +13,7 @@ export default function About(props) {
                     "All we wanted to do was get outside."
                 </h4>
                 <p className='main-text'>
-                    Living here on the West Coast of BC, there is just too many opportunities to get out and go exploring. But, outdoor gear is expensive and manufacturing and shipping plastic across the Pacific Ocean only polluted the outdoors we loved so much. So, we made Gearshare - a place where we can share each others' gear, get outside more, and help the environment. We are a family business going 27 years strong, and we welcome you to join us. We can't wait to meet you.
+                    Living here on the West Coast of BC, there is just too many opportunities to get out and go exploring. But, outdoor gear is expensive and manufacturing and shipping plastic across the Pacific Ocean only polluted the outdoors we loved so much. <br/><br/> So, my brother Ken and I made Gearshare - a place where we can share each others' gear, get outside more, and help the environment. We are a family business going 27 years strong, and we welcome you to join us. <br/><br/> We can't wait to meet you <br/><br/>- the Derugly brothers
                 </p>
             </div>
         </div>
