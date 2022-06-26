@@ -84,7 +84,7 @@ export default function RentPage(props) {
                     {gears.map(                  
                         (gear) => {
                             return (                            
-                            <div className='item' key={uniqid()} onClick={handleClick}>
+                            <div style={{backgroundImage:`url(${gear.image})`}} className='item' key={uniqid()} onClick={handleClick}>
                                 <p className='item-title' className='main-text'>
                                     {gear.title}
                                 </p>

@@ -36,7 +36,7 @@ export default class LoginPage extends React.Component {
         }
         axios.post("/ls/login", {email: this.state.email, password: this.state.password}, config).then(
             res => {
-                alert(`here is the error: ${res.data.message}`);
+                alert(`${res.data.message}`);
                 this.props.handleSuccess(res.data.success);
             }
         ).catch(
