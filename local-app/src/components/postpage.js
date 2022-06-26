@@ -11,6 +11,8 @@ const PostPage = () => {
     const [dates, setDates] = useState("");
     const [contact, setContact] = useState("");
     const [rate, setRate] = useState("");
+    const [image, setImage] = useState("");
+
     const submitHandler = (e) =>{
         e.preventDefault();
         
@@ -20,7 +22,7 @@ const PostPage = () => {
             }
         }
 
-        axios.post('/api/post', {title, body, dates, rate, contact}, config).then(
+        axios.post('/api/post', {title, body, dates, rate, contact, image}, config).then(
             res => {
                 alert(`${res.data.message}`);
             }
@@ -49,6 +51,10 @@ const PostPage = () => {
 
     const contactHandler = (e)=>{
         setContact(e.target.value)
+    }
+
+    const imageHandler = (e)=> {
+        setImage(e.target.value)
     }
     
     
@@ -86,6 +92,12 @@ const PostPage = () => {
                                         Description<br />
                                         <input 
                                         onChange={bodyHandler}
+                                    />
+                                        </label>
+                                        <label htmlFor='image url'>
+                                        image url<br />
+                                        <input 
+                                        onChange={imageHandler}
                                     />
                                         </label>
                                         <button>Post</button>

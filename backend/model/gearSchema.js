@@ -21,6 +21,10 @@ const GearSchema = new mongoose.Schema({
     contact: {
         type: String,
         required: [true, "Please enter the your prefered contact"]
+    },
+    image: {
+        type: String,
+        required: [false, "If you want you can share the image"]
     }
 });
 
