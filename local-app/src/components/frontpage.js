@@ -9,7 +9,7 @@ import Copyright from './copyright';
 export default function FrontPage(props) {
     return (
         <div id='front-page'>
-            <Navbar />
+            <Navbar isSuccessful={props.isSuccessful} />
             <Landing />
             <About />
             <Testimonies />

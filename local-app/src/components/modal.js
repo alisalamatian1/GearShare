@@ -14,31 +14,31 @@ export default class Modal extends React.Component {
 
             if (this.props.isDisplayed) {
                 return (
-                    <div id='overlay'>
-                        <div id='pop-up'>
-                            <div id='close-button' onClick={this.props.onClose}>
-                                <div className='crossbar' id='left-crossbar'>
-                                </div>
-                                <div className='crossbar' id='right-crossbar'>
+                    <div id='overlay' >
+                                <div id='pop-up'>
+                                    <div id='close-button' onClick={this.props.onClose}>
+                                        <div className='crossbar' id='left-crossbar'>
+                                        </div>
+                                        <div className='crossbar' id='right-crossbar'>
+                                        </div>
+                                    </div>
+                                    <h1 className='main-text'>{title}</h1>
+                                    <hr />
+                                    <p className='main-text' id='dates'>
+                                        {dates}
+                                    </p>
+                                    <p className='main-text' id='rate'>
+                                        {rate}
+                                    </p>
+                                    <p className='main-text' id='description'>
+                                        {description}
+                                    </p>
+                                    <p className='main-text' id='contact'>
+                                        {contact}
+                                    </p>
                                 </div>
                             </div>
-                            <h1 className='main-text'>{title}</h1>
-                            <hr />
-                            <p className='main-text' id='dates'>
-                                {dates}
-                            </p>
-                            <p className='main-text' id='rate'>
-                                {rate}
-                            </p>
-                            <p className='main-text' id='description'>
-                                {description}
-                            </p>
-                            <p className='main-text' id='contact'>
-                                {contact}
-                            </p>
-                        </div>
-                    </div>
-                )
+                        )
             } else {
                 return null;
             }

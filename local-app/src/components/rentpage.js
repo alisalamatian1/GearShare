@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom'
 import Navbar from './navbar';
 import Copyright from './copyright';
 import Modal from './modal';
+import {Transition, CSSTransition, SwitchTransition, TransitionGroup} from "react-transition-group";
 
-export default function RentPage() {
+export default function RentPage(props) {
     const [gears, setGears] = useState([]);
 
     const fetchGearList = () => {
@@ -67,7 +68,7 @@ export default function RentPage() {
 
     return (
         <div id='rent-page' className='section'>
-            <Navbar />
+            <Navbar isSuccessful={props.isSuccessful}/>
             <Modal 
             title={currentTitle}
             dates={currentDates}
@@ -77,8 +78,8 @@ export default function RentPage() {
             onClose={handleClose}
             isDisplayed={isModalDisplayed}
             />
-            <div id='rent-container'>
-                <h2 className='main-text'>Rent Gear</h2>
+                <div id='rent-container'>
+                    <h2 className='main-text'>Rent Gear</h2>
                 <div id='items-container'>
                     {gears.map(                  
                         (gear) => {

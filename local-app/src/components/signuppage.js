@@ -49,7 +49,9 @@ export default class SignupPage extends React.Component {
     render() {
         return (
             <div id='loginsignup-page' className='section'>
-                <Navbar />
+                <Navbar 
+                isSuccessful={this.props.isSuccessful}
+            />
                 <h2 className='main-text'>Sign Up</h2>
                 <p className='main-text'>One account. All the world's gear.</p>
                 <div id='form-container'>

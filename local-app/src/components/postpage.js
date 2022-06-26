@@ -5,7 +5,7 @@ import axios from 'axios'
 import Copyright from './copyright';
 import Navbar from './navbar';
 
-const PostPage = () => {
+const PostPage = (props) => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [dates, setDates] = useState("");
@@ -60,7 +60,7 @@ const PostPage = () => {
     
     return (       
         <div id='post-page' className='section'>
-            <Navbar />
+            <Navbar isSuccessful={props.isSuccessful} />
             <h1 className='main-text'>Make a Post</h1>
             <div id='post-container'>
                 <form id='post' onSubmit={submitHandler}>
