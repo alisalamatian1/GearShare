@@ -47,6 +47,11 @@
     justify-content: center;
     transition: 200ms;
     width: 15rem;
+    font-size: 2.5vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-text-stroke: white 0.25px;
 }
 
 .item:hover {
@@ -73,7 +78,9 @@
     flex-direction: column;
     height: 30rem;
     position: relative;
-    width: 40rem;
+    width: 30rem;
+    padding: 0px 50px;
+    text-align: center;
 }
 
 #pop-up > #close-button {
