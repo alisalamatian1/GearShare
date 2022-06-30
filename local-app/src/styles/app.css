@@ -35,9 +35,17 @@ button {
     background-color: var(--signup-bg);
 }
 
+.sign-up-button:hover {
+    cursor: pointer;
+}
+
 .sign-up-google {
     background-color: var(--signup-google-bg);
     color: var(--signup-google-fg);
+}
+
+.sign-up-google:hover {
+    cursor: pointer;
 }
 
 .copyright {

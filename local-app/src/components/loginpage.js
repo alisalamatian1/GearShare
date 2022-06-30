@@ -58,11 +58,11 @@ export default class LoginPage extends React.Component {
                     <form id='loginsignup-form' onSubmit={this.handleSubmit}>
                         <label for='email'>
                             Email: <br />
-                            <input id='email' value={this.state.email} onChange={this.emailHandler}/>
+                            <input id='email' autocomplete="off" value={this.state.email} onChange={this.emailHandler}/>
                         </label>
                         <label for='password'>
                             Password: <br />
-                            <input id='password' value={this.state.password} onChange={this.passwordHandler}/>
+                            <input id='password' autocomplete="off" value={this.state.password} onChange={this.passwordHandler}/>
                         </label>
                         <div className='signup-buttons'>
                             <button className='sign-up-button'>

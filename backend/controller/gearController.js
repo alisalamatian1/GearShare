@@ -21,8 +21,8 @@ exports.list_all = async (req, res, next) => {
 exports.post = async (req, res, next) => {
     const {title, body, dates, rate, contact, image} = req.body;
 
-    if(!title || !body) {
-        return next(new ErrorResponse("Please provide title and content", 400));
+    if(!title || !body || !dates || !rate || !contact) {
+        return next(new ErrorResponse("Please provide all the title, description, dates, rate, and contact", 400));
     }
 
     try {
