@@ -1,0 +1,36 @@
+#post-page {
+    align-items: center;
+    flex-direction: column;
+}
+
+#post-page h1 {
+    font-size: 3rem;
+}
+
+#post-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+#post {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#post > * {
+    margin: 0.5rem;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact > * {
+    margin-top: 0.2rem;
+}
+
+
