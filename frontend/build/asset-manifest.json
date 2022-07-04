@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8212e58a.css",
+    "main.js": "/static/js/main.a9a8756a.js",
+    "static/media/signup.png": "/static/media/signup.2f42615b5e754a74f6e9.png",
+    "static/media/about.png": "/static/media/about.463518cfad4010d23fa9.png",
+    "static/media/landing-image.png": "/static/media/landing-image.32f1a84fb146d0ad2e07.png",
+    "static/media/testimony3.jpg": "/static/media/testimony3.7f1de3c7bb2693258925.jpg",
+    "static/media/testimony2.jpg": "/static/media/testimony2.1d199ad9d37404f8faee.jpg",
+    "static/media/GearShare.png": "/static/media/GearShare.069eaebc44d2a25d4657.png",
+    "static/media/testimony1.jpg": "/static/media/testimony1.a75fc0043a898fb9d225.jpg",
+    "index.html": "/index.html",
+    "main.8212e58a.css.map": "/static/css/main.8212e58a.css.map",
+    "main.a9a8756a.js.map": "/static/js/main.a9a8756a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8212e58a.css",
+    "static/js/main.a9a8756a.js"
+  ]
+}
